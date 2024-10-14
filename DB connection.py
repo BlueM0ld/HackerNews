@@ -1,9 +1,3 @@
-# import pandas as pd
-# import sqlalchemy as sa
-
-# with engine.begin() as conn:
-#     daily = pd.read_sql_query(sa.text('SELECT * FROM "hacker_news"."items" LIMIT 1;'), conn)
-
 import pandas as pd
 import psycopg2
 
