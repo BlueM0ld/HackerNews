@@ -11,10 +11,13 @@ conn_params = {
 
 with psycopg2.connect(**conn_params) as conn:
     with conn.cursor() as cursor:
-        query = 'SELECT * FROM "hacker_news"."users" LIMIT 10;'
-        test = pd.read_sql_query(query, conn)
-print(test)
+        query = 'SELECT * FROM "hacker_news"."users" LIMIT 1000;'
+        query2 = 'SELECT * FROM "hacker_news"."items" LIMIT 1000;'
+        users = pd.read_sql_query(query, conn)
+        items = pd.read_sql_query(query2, conn)
 
-test = pd.DataFrame(test)
-print(test.head())
-print(test['karma'].max())
+users = pd.DataFrame(users)
+items = pd.DataFrame(items)
+print(items.describe())
+print(users.describe())
+# print(test['karma'].max())
