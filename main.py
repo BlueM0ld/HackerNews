@@ -15,9 +15,9 @@ with psycopg2.connect(**conn_params) as conn:
         query2 = 'SELECT * FROM "hacker_news"."items" LIMIT 1000;'
         users = pd.read_sql_query(query, conn)
         items = pd.read_sql_query(query2, conn)
-
+ 
 users = pd.DataFrame(users)
 items = pd.DataFrame(items)
 print(items.describe())
 print(users.describe())
-# print(test['karma'].max())
+# print(test['karma'].max())``
