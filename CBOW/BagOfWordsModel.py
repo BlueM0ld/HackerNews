@@ -1,39 +1,41 @@
-# Plot a bar chart of the top 100 most common words in the titles of posts on Hacker News
-
 import pandas as pd
-import psycopg2
 import matplotlib.pyplot as plt
 from collections import Counter
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import nltk
-import matplotlib.pyplot as plt
 
-# Download NLTK stopwords if you don't have them
+# Download NLTK stopwords and tokenizer if needed
 nltk.download('stopwords')
-nltk.download('punkt_tab')
+nltk.download('punkt')
 
+# Open and read the Text8 dataset
 with open('./text8', 'r') as file:
     result = file.read()
 
+# Tokenize the entire text
+tokenized_words = word_tokenize(result.lower())  # Tokenize and convert to lowercase
 
-
-# Display the first few rows of the result
-print(result.head())
-
-all_titles = result['title'].tolist()
-# set stop words in english.
+# Set stopwords in English
 stop_words = set(stopwords.words('english'))
 
-all_words = []
+# Remove punctuation and stopwords
+filtered_words = [word for word in tokenized_words if word.isalnum() and word not in stop_words]
 
-# tokenize the titles
-for title in all_titles:
-    tokenised_words = word_tokenize(title.lower())
-    print("is token?", tokenised_words)
-    words_no_punct = [word for word in tokenised_words if word.isalnum()]
-    # check for stop words and remove them
-    filtered_words = [word for word in words_no_punct if word not in stop_words]
-    all_words.extend(filtered_words)
+# Count the frequency of the words
+word_counts = Counter(filtered_words)
 
-print(all_words)
+# Get the 100 most common words
+common_words = word_counts.most_common(100)
+
+# Prepare data for plotting
+words, counts = zip(*common_words)
+
+# Plot the top 100 most common words
+plt.figure(figsize=(12, 8))
+plt.barh(words, counts, color='skyblue')
+plt.xlabel('Frequency')
+plt.ylabel('Words')
+plt.title('Top 100 Most Common Words in Text8 Dataset')
+plt.gca().invert_yaxis()  # Invert y-axis to show the most frequent words at the top
+plt.show()
