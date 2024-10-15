@@ -48,6 +48,7 @@ all_words = []
 # tokenize the titles
 for title in all_titles:
     tokenised_words = word_tokenize(title.lower())
+    print("is token?", tokenised_words)
     words_no_punct = [word for word in tokenised_words if word.isalnum()]
     # check for stop words and remove them
     filtered_words = [word for word in words_no_punct if word not in stop_words]
