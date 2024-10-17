@@ -57,8 +57,9 @@ print(corpus[:7])   # ['anarchism', 'originated', 'as', 'a', 'term', 'of', 'abus
 def create_lookup_tables(words: list[str]) -> tuple[dict[str, int], dict[int, str]]:
   word_counts = collections.Counter(words)
   vocab = sorted(word_counts, key=lambda k: word_counts.get(k), reverse=True)
-  int_to_vocab = {ii+1: word for ii, word in enumerate(vocab)}
+  int_to_vocab = {ii+2: word for ii, word in enumerate(vocab)}
   int_to_vocab[0] = '<PAD>'
+  int_to_vocab[1] = '<UNK>'
   vocab_to_int = {word: ii for ii, word in int_to_vocab.items()}
   return vocab_to_int, int_to_vocab
 
@@ -254,8 +255,8 @@ opFoo = torch.optim.Adam(mFoo.parameters(), lr=0.001)
 #
 wandb.init(project='skip-gram', name='mFoo')
 for epoch in range(10):
-  wins = more_itertools.windowed(tokens[:10000], 3)
-  prgs = tqdm.tqdm(enumerate(wins), total=len(tokens[:10000]), desc=f"Epoch {epoch+1}", leave=False)
+  wins = more_itertools.windowed(tokens[:500], 3)
+  prgs = tqdm.tqdm(enumerate(wins), total=len(tokens[:500]), desc=f"Epoch {epoch+1}", leave=False)
   for i, tks in prgs:
     inpt = torch.LongTensor([tks[1]])
     trgs = torch.LongTensor([tks[0], tks[2]])
@@ -278,17 +279,15 @@ torch.save(mFoo.state_dict(), './text8_model_state.pth')
 # Initialize the model
 vocab_size = len(words_to_ids)
 embedding_dim = 64  # Should match the value used during training
-model = SkipGramFoo(vocab_size, embedding_dim).to(device)
+model = SkipGramFoo(vocab_size, embedding_dim, 2)
 
 # Load the trained model's state dictionary
-model.load_state_dict(torch.load('text8_model_state.pth', map_location=device))
+model.load_state_dict(torch.load('text8_model_state.pth'))
 
 # Set the model to evaluation mode
 model.eval()
 
 print("Model loaded and set to evaluation mode successfully.")
-
-
 
 # -------------------------------------------------------------------------------------------------
 
@@ -306,8 +305,8 @@ expected_context_ids = torch.LongTensor([words_to_ids[word] for word in context_
 
 # Forward pass (without computing gradients)
 with torch.no_grad():
-    rand = torch.randint(0, len(test_word_id), (2,))
-    output = model(test_word_id)
+    rand = torch.randint(0, 500, (2,))
+    output = model(test_word_id, expected_context_ids, rand)
     print(output)
     converted_output = ids_to_words[output]
 
