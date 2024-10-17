@@ -1,0 +1,37 @@
+{
+  "os":  "macOS-15.0-arm64-arm-64bit",
+  "python":  "3.11.6",
+  "startedAt":  "2024-10-17T12:12:25.442079Z",
+  "program":  "/Users/leare/mlx/HackerNews/resource/example.py",
+  "codePath":  "resource/example.py",
+  "git":  {
+    "remote":  "git@github.com:BlueM0ld/HackerNews.git",
+    "commit":  "4b560a10c946c19c3c7ffdeb31c3de1c8c505642"
+  },
+  "email":  "learecsong@gmail.com",
+  "root":  "/Users/leare/mlx/HackerNews",
+  "host":  "MacBook-Pro-2.local",
+  "username":  "leare",
+  "executable":  "/opt/homebrew/opt/python@3.11/bin/python3.11",
+  "codePathLocal":  "resource/example.py",
+  "cpu_count":  12,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "280764686336"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  12,
+    "countLogical":  12
+  },
+  "gpuapple":  {
+    "gpuType":  "Apple M2 Pro",
+    "vendor":  "sppci_vendor_Apple",
+    "cores":  19
+  }
+}

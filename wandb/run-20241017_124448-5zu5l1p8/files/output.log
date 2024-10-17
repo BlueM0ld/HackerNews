@@ -1,0 +1,5 @@
+Traceback (most recent call last):                                                                                                                          
+  File "/Users/leare/mlx/HackerNews/resource/example.py", line 270, in <module>
+    logger.info(f"Stopping training early at epoch {epoch+1}, step {i+1} as loss reached {loss.item()}")
+    ^^^^^^
+NameError: name 'logger' is not defined

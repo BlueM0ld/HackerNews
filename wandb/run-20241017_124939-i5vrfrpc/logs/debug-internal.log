@@ -1,0 +1,18 @@
+{"time":"2024-10-17T12:49:39.599755+01:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-17T12:49:39.599792+01:00","level":"INFO","msg":"created symlink","path":"/Users/leare/mlx/HackerNews/wandb/run-20241017_124939-i5vrfrpc/logs/debug-core.log"}
+{"time":"2024-10-17T12:49:39.614393+01:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-17T12:49:39.62524+01:00","level":"INFO","msg":"created new stream","id":"i5vrfrpc"}
+{"time":"2024-10-17T12:49:39.625281+01:00","level":"INFO","msg":"stream: started","id":"i5vrfrpc"}
+{"time":"2024-10-17T12:49:39.625288+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:39.625309+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:39.625298+01:00","level":"INFO","msg":"sender: started","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:40.319572+01:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-17T12:49:40.320816+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-17T12:49:51.205768+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-17T12:49:51.205945+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-17T12:49:51.81905+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-17T12:49:53.052485+01:00","level":"INFO","msg":"stream: closing","id":"i5vrfrpc"}
+{"time":"2024-10-17T12:49:53.052516+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:53.052532+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:53.052539+01:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"i5vrfrpc"}}
+{"time":"2024-10-17T12:49:53.052611+01:00","level":"INFO","msg":"stream: closed","id":"i5vrfrpc"}

@@ -1,0 +1,18 @@
+{"time":"2024-10-17T13:04:44.270567+01:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-17T13:04:44.270631+01:00","level":"INFO","msg":"created symlink","path":"/Users/leare/mlx/HackerNews/wandb/run-20241017_130444-tvutx62b/logs/debug-core.log"}
+{"time":"2024-10-17T13:04:44.276083+01:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-17T13:04:44.287482+01:00","level":"INFO","msg":"created new stream","id":"tvutx62b"}
+{"time":"2024-10-17T13:04:44.287529+01:00","level":"INFO","msg":"stream: started","id":"tvutx62b"}
+{"time":"2024-10-17T13:04:44.287586+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:44.287565+01:00","level":"INFO","msg":"sender: started","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:44.287544+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:44.509572+01:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-17T13:04:44.511606+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-17T13:04:56.10519+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-17T13:04:56.105357+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-17T13:04:56.856728+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-17T13:04:58.132682+01:00","level":"INFO","msg":"stream: closing","id":"tvutx62b"}
+{"time":"2024-10-17T13:04:58.132712+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:58.132741+01:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:58.132734+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"tvutx62b"}}
+{"time":"2024-10-17T13:04:58.132892+01:00","level":"INFO","msg":"stream: closed","id":"tvutx62b"}

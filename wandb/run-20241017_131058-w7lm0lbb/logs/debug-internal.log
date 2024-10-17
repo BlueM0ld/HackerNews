@@ -1,0 +1,18 @@
+{"time":"2024-10-17T13:10:58.274584+01:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-17T13:10:58.27467+01:00","level":"INFO","msg":"created symlink","path":"/Users/leare/mlx/HackerNews/wandb/run-20241017_131058-w7lm0lbb/logs/debug-core.log"}
+{"time":"2024-10-17T13:10:58.280219+01:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-17T13:10:58.292949+01:00","level":"INFO","msg":"created new stream","id":"w7lm0lbb"}
+{"time":"2024-10-17T13:10:58.293014+01:00","level":"INFO","msg":"stream: started","id":"w7lm0lbb"}
+{"time":"2024-10-17T13:10:58.293104+01:00","level":"INFO","msg":"sender: started","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:10:58.293019+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:10:58.293105+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:10:58.672186+01:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-17T13:10:58.674121+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-17T13:11:09.917987+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-17T13:11:09.918157+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-17T13:11:10.649327+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-17T13:11:11.889019+01:00","level":"INFO","msg":"stream: closing","id":"w7lm0lbb"}
+{"time":"2024-10-17T13:11:11.889041+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:11:11.889058+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:11:11.889066+01:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"w7lm0lbb"}}
+{"time":"2024-10-17T13:11:11.889116+01:00","level":"INFO","msg":"stream: closed","id":"w7lm0lbb"}
