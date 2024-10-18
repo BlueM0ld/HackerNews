@@ -34,21 +34,21 @@ conn_params = {
 }
 
 # Connect to the database
-# with psycopg2.connect(**conn_params) as conn:
-#     with conn.cursor() as cursor:
-#         # Query to get the post IDs and their submission times
-#         query = '''
-#         SELECT items.title
-#         FROM "hacker_news"."items"
-#         WHERE items.title IS NOT NULL;
-#         '''
+with psycopg2.connect(**conn_params) as conn:
+    with conn.cursor() as cursor:
+        # Query to get the post IDs and their submission times
+        query = '''
+        SELECT items.title
+        FROM "hacker_news"."items"
+        WHERE items.title IS NOT NULL;
+        '''
 
-#         # Execute the query and load the results into a DataFrame
-#         result = pd.read_sql_query(query, conn)
-#         print("Data was successfully downloaded")
+        # Execute the query and load the results into a DataFrame
+        result = pd.read_sql_query(query, conn)
+        print("Data was successfully downloaded")
     
-# result.to_csv('output.csv', index=False)
-# print("Data was successfully saved")
+result.to_csv('output.csv', index=False)
+print("Data was successfully saved")
 # You can then open it in a similar way:
 with open('output.csv', encoding='utf-8') as f:
     csv_data = f.read()
@@ -98,6 +98,7 @@ def create_lookup_tables(words: list[str]) -> tuple[dict[str, int], dict[int, st
   vocab = sorted(word_counts, key=lambda k: word_counts.get(k), reverse=True)
   int_to_vocab = {ii+2: word for ii, word in enumerate(vocab)}
   int_to_vocab[0] = '<PAD>'
+
   vocab_to_int = {word: ii for ii, word in int_to_vocab.items()}
   return vocab_to_int, int_to_vocab
 
